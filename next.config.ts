@@ -15,6 +15,14 @@ const nextConfig = {
     });
     return config;
   },
+  // Disable server-side features
+  experimental: {
+    appDir: true,
+  },
+  // Ensure proper static generation
+  generateStaticParams: async () => {
+    return [];
+  },
 };
 
 export default nextConfig;
