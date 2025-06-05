@@ -7,6 +7,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   distDir: 'out',
+  assetPrefix: '/Envera-Biosols/',
 };
 
 export default nextConfig;
