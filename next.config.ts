@@ -7,6 +7,14 @@ const nextConfig = {
   },
   trailingSlash: true,
   assetPrefix: process.env.NODE_ENV === 'production' ? '/Envera-Biosols/' : '',
+  // Ensure static files are properly handled
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+      type: 'asset/resource',
+    });
+    return config;
+  },
 };
 
 export default nextConfig;
