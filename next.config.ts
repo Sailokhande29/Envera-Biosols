@@ -23,6 +23,10 @@ const nextConfig = {
   generateStaticParams: async () => {
     return [];
   },
+  // Disable telemetry
+  telemetry: {
+    disabled: true,
+  },
 };
 
 export default nextConfig;
